@@ -1,0 +1,16 @@
+div {
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+svg path {
+  fill: var(--icon-color);
+}
+
+

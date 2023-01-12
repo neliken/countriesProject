@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import '~font-awesome/css/font-awesome.css';
+
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-dark-blue-text: hsl(200, 15%, 8%);
+  --dark-grey: hsl(0, 0%, 52%);
+  --very-light-grey: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --homepage-items-text: 14px;
+  --detail-page-text: 16px;
+  --font-family: 'Nunito Sans', sans-serif;
+}
+
+body[data-theme='dark']  {
+  --background-color: var(--very-dark-blue);
+  --elements-color: var(--dark-blue);
+  --text-color: var(--white);
+  --input-background-color: var(--white);
+  --icon-color: white;
+}
+
+body[data-theme='light'] {
+  --background-color: var(--very-light-grey);
+  --elements-color: var(--white);
+  --text-color: var(--very-dark-blue-text);
+  --input-background-color: var(--dark-grey);
+  --icon-color: black;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
