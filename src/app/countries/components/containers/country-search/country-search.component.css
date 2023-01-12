@@ -1,0 +1,39 @@
+div {
+  display: flex;
+  height: 50px;
+  width: 350px;
+  background-color: var(--elements-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding-left: 30px;
+  gap: 30px;
+  box-shadow: var(--border-shadow);
+}
+
+input {
+  background-color: var(--elements-color);
+  border: 1px solid transparent;
+  color: var(--text-color);
+}
+
+input::placeholder {
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+input:focus {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+div svg {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  justify-content: center;
+}
+
+div svg path {
+  fill: var(--text-color)
+}

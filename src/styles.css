@@ -12,6 +12,7 @@
   --homepage-items-text: 14px;
   --detail-page-text: 16px;
   --font-family: 'Nunito Sans', sans-serif;
+  --border-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 body[data-theme='dark']  {

@@ -7,7 +7,7 @@ export const routes = [
     component: CountriesContainerComponent
   },
   {
-    path: 'countries/1',
+    path: 'countries/:name',
     component: CountryContainerComponent
   },
   {

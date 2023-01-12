@@ -1,0 +1,18 @@
+select {
+  height: 50px;
+  width: 200px;
+  font-family: var(--font-family);
+  background-color: var(--elements-color);
+  border-color: transparent;
+  box-shadow: var(--border-shadow);
+  border-radius: 4px;
+  color: var(--text-color);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+select:focus {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}

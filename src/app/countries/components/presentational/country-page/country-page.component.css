@@ -1,0 +1,105 @@
+button {
+  background-color: var(--elements-color);
+  color: var(--text-color);
+  margin: 30px 0px 60px 0px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: var(--border-shadow);
+  padding: 10px 25px;
+  gap: 10px;
+}
+
+button svg {
+  display: inline-block;
+  width: 15px;
+}
+
+button svg path {
+  fill: var(--icon-color);
+}
+
+.country-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--detail-page-text);
+  font-weight: 200;
+  padding: 0px;
+  align-items: center;
+}
+
+.country-container img {
+  width: 100%;
+}
+
+.country-container mat-card-content {
+  width: 100%;
+  padding: 0px;
+}
+
+.country-container mat-card-title {
+  font-weight: 800;
+}
+
+.country-container .country-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.country-container .border-countries {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.country-container .border-countries div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.country-container .border-countries span {
+  height: 15px;
+  width: 20px;
+  background-color: var(--elements-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*margin: 10px 10px;*/
+  padding: 10px 30px;
+  border-radius: 4px;
+  box-shadow: var(--border-shadow);
+}
+
+.country-container .country-info div p {
+  margin: 0px 0px 10px 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .country-container {
+    flex-direction: row;
+    gap: 130px;
+    padding: 50px 0px;
+  }
+
+  .country-container .country-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .country-container mat-card-title {
+    padding: 10px 0px;
+  }
+
+  .country-container .border-countries {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}

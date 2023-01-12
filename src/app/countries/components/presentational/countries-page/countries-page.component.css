@@ -1,0 +1,37 @@
+.search-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.container-cards .country-card {
+  width: 270px;
+  height: 350px;
+  box-shadow: var(--border-shadow);
+}
+
+.container-cards .country-card img {
+  height: 175px;
+}
+
+.container-cards .country-card .card-header {
+  font-size: 18px;
+  padding: 25px;
+}
+
+.container-cards .country-card .card-content {
+  font-size: var(--homepage-items-text);
+  margin-top: 0px;
+  padding: 0px 25px;
+}
+
+.container-cards .country-card .card-content p {
+  margin: 0px;
+  padding-bottom: 7px;
+}
