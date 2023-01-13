@@ -14,6 +14,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {CountriesPageComponent} from './components/presentational/countries-page/countries-page.component';
 import {CountryPageComponent} from './components/presentational/country-page/country-page.component';
 import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,14 +28,15 @@ import {MatInputModule} from "@angular/material/input";
   exports: [
     CountriesContainerComponent
   ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    MatCardModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatInputModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        MatCardModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatInputModule,
+        ReactiveFormsModule
+    ]
 })
 export class CountriesModule {
 }

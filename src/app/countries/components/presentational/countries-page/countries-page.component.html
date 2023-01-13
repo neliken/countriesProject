@@ -1,11 +1,16 @@
 <div>
   <div class="search-field">
-    <app-country-search></app-country-search>
-    <app-country-filter-by-region></app-country-filter-by-region>
+    <app-country-search (onInputChange)="onChangeInput($event)"></app-country-search>
+    <app-country-filter-by-region (onSelectChange)="onChangeSelect($event)"></app-country-filter-by-region>
   </div>
-<!--  <app-country-card [countries]="countries"></app-country-card>-->
-  <div class="container-cards">
-    <mat-card class="country-card" *ngFor="let country of countries" [routerLink]="['/countries', country.name ]">
+  <div class="container-cards"
+       *ngIf="countries.length!==0; else showThis"
+  >
+    <mat-card
+      class="country-card"
+      *ngFor="let country of countries"
+      [routerLink]="['/countries', country.name ]"
+    >
       <img mat-card-image src="{{ country.flag_png}}" alt="Flag Image">
       <mat-card-header class="card-header">
         <mat-card-title><b>{{ country.name }}</b></mat-card-title>
@@ -26,4 +31,5 @@
       </mat-card-content>
     </mat-card>
   </div>
+  <ng-template #showThis>No Countries</ng-template>
 </div>

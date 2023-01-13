@@ -15,4 +15,12 @@ export class CountriesPageComponent {
 
   @Output()
   public onRegionChange = new EventEmitter<any>();
+
+  onChangeInput(value: string) {
+    this.onSearchChange.emit(value);
+  }
+
+  onChangeSelect(value: string) {
+    this.onRegionChange.emit(value);
+  }
 }

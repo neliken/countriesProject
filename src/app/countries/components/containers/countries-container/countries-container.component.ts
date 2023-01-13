@@ -5,7 +5,7 @@ import {Country} from "../../../countries";
 @Component({
   template: `
       <app-countries-page
-              [countries]="countries"
+              [countries]="filteredCountries"
               (onSearchChange)="searchChanged($event)"
               (onRegionChange)="regionChanged($event)"
       ></app-countries-page>
@@ -13,6 +13,7 @@ import {Country} from "../../../countries";
 })
 export class CountriesContainerComponent implements OnInit {
   countries: Country[] = [];
+  filteredCountries: Country[] = [];
 
   constructor(private countriesService: CountriesService) {
   }
@@ -31,14 +32,15 @@ export class CountriesContainerComponent implements OnInit {
         })
       })
       this.countries = newObj;
+      this.filteredCountries = this.countries;
     })
   }
 
-  public searchChanged(event: any) {
-
+  searchChanged(value: string) {
+    this.filteredCountries = this.countries.filter(country => country.name.includes(value));
   }
 
-  public regionChanged(event: any) {
-
+  public regionChanged(value: string) {
+    this.filteredCountries = this.countries.filter(country => country.region === value);
   }
 }

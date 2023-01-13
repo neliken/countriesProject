@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-country-filter-by-region',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./country-filter-by-region.component.css']
 })
 export class CountryFilterByRegionComponent {
+  @Output("onSelectChange")
+  onSelectChange: EventEmitter<string> = new EventEmitter<string>();
 
+  getSelect(value: string){
+    this.onSelectChange.emit(value);
+  }
 }
